@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEDAIN | The Next Civilization Infrastructure</title>
+    
+    <!-- SEO & Global Multilingual Tags -->
+    <meta name="description" content="THEDAIN Hyper Hybrid Technology Platform connecting Hydrogen Energy, Solid-State Battery, Cognitive V2X and Quantum Intelligence.">
+    <meta name="keywords" content="Hydrogen Infrastructure, Solid State Battery, Quantum Computing, V2X Network, AI Energy Systems, Graphene Topological Electrode">
+    <meta name="author" content="THEDAIN Co., Ltd.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:site_name" content="THEDAIN">
+    <meta name="theme-color" content="#0B0F19">
+    
+    <link rel="canonical" href="https://thedain.com">
+    <link rel="alternate" hreflang="ko" href="https://thedain.com/ko">
+    <link rel="alternate" hreflang="en" href="https://thedain.com/en">
+    <link rel="alternate" hreflang="zh" href="https://thedain.com/zh">
+    <link rel="alternate" hreflang="ja" href="https://thedain.com/ja">
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Social Meta -->
+    <meta property="og:title" content="THEDAIN | The Next Civilization Infrastructure">
+    <meta property="og:description" content="Engineering the Infrastructure of the Next Civilization">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://thedain.com/assets/og-image-1200x630.jpg">
+    <meta property="og:url" content="https://thedain.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "THEDAIN",
+        "url": "https://thedain.com",
+        "logo": "https://thedain.com/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+82-41-943-3338",
+            "contactType": "technical support",
+            "email": "info@thedain.co.kr"
+        },
+        "sameAs": ["https://linkedin.com/company/thedain"]
+    }
+    </script>
+
+    <!-- Fonts & Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <style>
+        :root { 
+            --bg-main: #0B0F19;
+            --brand-primary: #0066FF;
+            --brand-cyan: #00EAFF;
+            --brand-purple: #7C3AED;
+            --brand-green: #00FF88;
+            --brand-orange: #FF6B00;
+            --text-main: #F8FAFC;
+            --text-secondary: #CBD5E1;
+            --glass: rgba(15, 23, 42, 0.78);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --neumorph-shadow: 8px 8px 16px rgba(0,0,0,0.45), -8px -8px 16px rgba(255,255,255,0.02);
+            --neon-glow: 0 0 25px;
+            --transition-premium: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body { 
+            font-family: "Pretendard", "Inter", system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main); 
+            overflow-x: hidden; 
+            line-height: 1.6; 
+            word-break: keep-all; 
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(0, 102, 255, 0.08), transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.08), transparent 40%),
+                var(--bg-main);
+        }
+
+        /* Lenis Smooth Scroll Fix */
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+
+        /* Scroll Progress Bar */
+        #scroll-progress { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(to right, var(--brand-primary), var(--brand-cyan)); z-index: 10002; }
+
+        /* Preloader */
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-main); display: flex; align-items: center; justify-content: center; z-index: 10001; transition: opacity 0.6s ease; }
+        .spinner { width: 40px; height: 40px; border: 4px solid rgba(255,255,255,0.1); border-top: 4px solid var(--brand-primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Background Visuals */
+        #canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.6; }
+        .hero-glow {
+            position: absolute; width: 1200px; height: 1200px; top: -400px; left: 50%; transform: translateX(-50%);
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.12) 0%, transparent 70%);
+            filter: blur(120px); pointer-events: none; z-index: 0;
+        }
+
+        /* Premium Navigation */
+        nav { background: transparent; transition: all 0.4s ease; z-index: 1000; padding: 1.5rem 0; }
+        nav.scrolled {
+            background: rgba(10, 15, 30, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem 0;
+        }
+
+        .nav-link { font-size: 0.75rem; letter-spacing: 1.5px; color: var(--text-secondary); transition: 0.4s; cursor: pointer; text-transform: uppercase; font-weight: 800; }
+        .nav-link.active, .nav-link:hover { color: var(--brand-cyan); }
+
+        /* Section Accent Neon Glow */
+        #hydrogen .glass-panel { box-shadow: var(--premium-shadow), var(--neon-glow) var(--brand-cyan); }
+        #battery .glass-panel  { box-shadow: var(--premium-shadow), var(--neon-glow) var(--brand-green); }
+        #v2x .glass-panel      { box-shadow: var(--premium-shadow), var(--neon-glow) var(--brand-orange); }
+        #quantum .glass-panel  { box-shadow: var(--premium-shadow), var(--neon-glow) var(--brand-purple); }
+
+        /* Glass Panel v3.0 */
+        .glass-panel {
+            background: var(--glass-bg); 
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px; padding: 60px;
+            box-shadow: var(--premium-shadow);
+            max-width: 850px;
+            color: #F8FAFC;
+        }
+
+        .content-section { position: relative; z-index: 1; min-height: 100vh; display: none; align-items: center; padding: 120px 8%; opacity: 0; transform: translateY(30px); transition: var(--transition-premium); }
+        .content-section.active { display: flex; opacity: 1; transform: translateY(0); }
+
+        /* Blueprint Grid Weakened */
+        .blueprint-grid {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .premium-title { 
+            font-weight: 900; 
+            letter-spacing: -0.02em;
+            text-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.4);
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .patent-badge {
+            display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px;
+            background: var(--brand-primary); color: #FFFFFF; border-radius: 99px; font-size: 0.75rem; font-weight: 900;
+            box-shadow: 0 10px 20px rgba(0,102,255,0.2); animation: badge-pulse 4s infinite;
+            cursor: pointer; transition: 0.3s;
+        }
+        .patent-badge:hover { transform: scale(1.05); background: #004ecc; }
+        @keyframes badge-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+
+        /* Nexus Node Legibility */
+        .nexus-node {
+            position: relative; padding: 20px; border: 1px solid rgba(255,255,255,0.06);
+            background: #111827; border-radius: 16px; text-align: center; font-weight: 800; font-size: 0.85rem; transition: all 0.4s; z-index: 2; cursor: pointer;
+            color: #F1F5F9;
+        }
+        .nexus-node:hover { border-color: var(--brand-cyan); transform: scale(1.05); box-shadow: 0 0 40px var(--brand-primary); }
+
+        /* Primary Button Gradient */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));
+            color: white; padding: 18px 45px; border-radius: 99px; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem;
+            box-shadow: 0 10px 40px rgba(0,102,255,0.5); transition: 0.4s;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 50px rgba(0,102,255,0.6); }
+
+        .stack-card { cursor: pointer; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .stack-card:hover { transform: scale(1.05) translateY(-5px); border-color: var(--brand-cyan); }
+
+        #mobile-menu { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); clip-path: circle(0% at 100% 0%); }
+        #mobile-menu.open { clip-path: circle(150% at 100% 0%); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .lang-btn { cursor: pointer; font-size: 0.65rem; font-weight: 900; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; transition: 0.3s; color: var(--text-muted); }
+        .lang-btn.active { border-color: var(--brand-cyan); color: var(--brand-cyan); background: rgba(0, 234, 255, 0.1); }
+
+        @media (max-width: 1024px) {
+            .section-content-wrapper { padding: 80px 6%; }
+            .premium-title { font-size: 3.2rem !important; }
+        }
+    </style>
+</head>
+<body class="blueprint-grid">
+
+    <div id="scroll-progress"></div>
+    <div id="loader"><div class="spinner"></div></div>
+
+    <div id="canvas-container"></div>
+
+    <nav class="fixed top-0 w-full py-6 px-6 md:px-12 flex justify-between items-center z-[1000]" role="navigation" aria-label="Main Navigation">
+        <a onclick="showSection('hero')" class="text-2xl font-black tracking-tighter cursor-pointer flex items-center gap-3 text-white" aria-label="THEDAIN Home">
+            <span class="w-1.5 h-6 bg-blue-600 block shadow-[0_0_15px_rgba(0,102,255,0.6)]"></span> THEDAIN
+        </a>
+        
+        <div class="hidden lg:flex gap-10 items-center">
+            <div class="nav-item relative group">
+                <button class="nav-link flex items-center gap-2" aria-expanded="false" data-t="nav_heritage">Heritage <i class="fa-solid fa-chevron-down text-[8px]"></i></button>
+                <div class="absolute top-full left-0 bg-slate-900 border border-white/5 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-4 rounded-2xl min-w-[220px]">
+                    <a onclick="showSection('mission')" class="block py-2 text-sm text-slate-300 hover:text-blue-500 transition-colors">Mission & Vision</a>
+                    <a onclick="showSection('stack')" class="block py-2 text-sm text-slate-300 hover:text-blue-500 transition-colors">Core Architecture</a>
+                    <a onclick="showSection('history')" class="block py-2 text-sm text-slate-300 hover:text-blue-500 transition-colors">Technical Hub</a>
+                    <a onclick="showSection('investor')" class="block py-2 text-sm font-bold text-blue-400 border-t border-white/5 mt-2 pt-2">Investor Data Room</a>
+                </div>
+            </div>
+            <a onclick="showSection('hydrogen')" class="nav-link" id="nav-hydrogen" data-t="nav_hydrogen">Hydrogen</a>
+            <a onclick="showSection('battery')" class="nav-link" id="nav-battery" data-t="nav_battery">Solid-State</a>
+            <a onclick="showSection('v2x')" class="nav-link" id="nav-v2x" data-t="nav_v2x">Cognitive V2X</a>
+            <a onclick="showSection('quantum')" class="nav-link" id="nav-quantum" data-t="nav_quantum">Quantum</a>
+
+            <div class="flex gap-2 ml-6 border-l border-white/10 pl-6">
+                <button class="lang-btn active" onclick="changeLang('ko')" aria-label="Korean">KR</button>
+                <button class="lang-btn" onclick="changeLang('en')" aria-label="English">EN</button>
+                <button class="lang-btn" onclick="changeLang('zh')" aria-label="Chinese">ZH</button>
+                <button class="lang-btn" onclick="changeLang('ja')" aria-label="Japanese">JA</button>
+            </div>
+        </div>
+        <button class="lg:hidden text-2xl text-white" onclick="toggleMobileMenu()" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars-staggered"></i></button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-2xl z-[2000] hidden flex-col p-12">
+        <div class="absolute top-8 right-8 text-3xl text-white" onclick="toggleMobileMenu()"><i class="fa-solid fa-xmark"></i></div>
+        <div class="flex flex-col gap-8 pt-12 text-left">
+            <a onclick="showSection('hero')" class="text-4xl font-black uppercase text-white">Home</a>
+            <a onclick="showSection('mission')" class="text-4xl font-black uppercase text-blue-500">Vision</a>
+            <a onclick="showSection('stack')" class="text-4xl font-black uppercase text-blue-500">Architecture</a>
+            <a onclick="showSection('hydrogen')" class="text-4xl font-black uppercase text-blue-500">Hydrogen</a>
+            <a onclick="showSection('battery')" class="text-4xl font-black uppercase text-emerald-500">Solid-State</a>
+            <a onclick="showSection('v2x')" class="text-4xl font-black uppercase text-orange-500">V2X</a>
+            <a onclick="showSection('quantum')" class="text-4xl font-black uppercase text-purple-500">Quantum</a>
+        </div>
+    </div>
+
+    <main role="main">
+        <!-- HERO -->
+        <section id="hero" class="content-section active relative overflow-hidden">
+            <div class="hero-glow"></div>
+            <div class="absolute inset-0 z-[-1] opacity-25 pointer-events-none">
+                <video autoplay muted loop playsinline class="w-full h-full object-cover" loading="lazy">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-flow-of-data-in-a-network-background-34509-large.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="section-content-wrapper text-center w-full">
+                <div class="reveal">
+                    <span class="text-[0.7rem] md:text-[0.85rem] tracking-[1.5em] uppercase text-slate-400 mb-10 block font-black" data-t="hero_label">Engineering the Infrastructure</span>
+                    <h1 class="text-6xl md:text-[9.5rem] font-black uppercase mb-12 text-white leading-[0.85] premium-title" data-t="hero_title" data-html="true">Next<br><span class="highlight-text">Civilization</span></h1>
+                    <p class="text-xl md:text-3xl font-medium text-slate-300 max-w-4xl mx-auto mb-20 leading-relaxed section-desc" data-t="hero_desc">
+                        에너지, 모빌리티, 인프라의 모든 지능형 신경망을 연결하는 AI 기반 초격차 하이브리드 기술의 정점.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <button onclick="showSection('stack')" class="btn-primary" data-t="hero_btn">Start Exploration</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY STACK -->
+        <section id="stack" class="content-section">
+            <div class="section-content-wrapper w-full text-center">
+                <div class="reveal mb-24">
+                    <span class="text-blue-500 text-xs font-black tracking-widest uppercase mb-4 block" data-t="stack_label">Core Nexus</span>
+                    <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter premium-title" data-t="stack_title">Technical Architecture</h2>
+                </div>
+
+                <div class="max-w-6xl mx-auto relative flex flex-col items-center">
+                    <div class="nexus-node w-72 border-blue-600 shadow-2xl reveal">양자 소재 (Quantum Science)</div>
+                    <div class="w-px h-20 bg-slate-700 my-4"></div>
+                    <div class="nexus-node w-96 bg-blue-900/40 text-white border-blue-500/30 shadow-2xl py-8 reveal">
+                        Graphene Topological Electrode
+                        <a href="https://patents.google.com/patent/KR102820330B1/ko" target="_blank" onclick="event.stopPropagation();" class="block text-[9px] text-cyan-400 mt-2 font-mono uppercase tracking-[0.2em] hover:text-white transition-colors" data-t="stack_patent_id">Patent: KR102820330B1 (2025)</a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 w-full reveal text-white">
+                        <div onclick="showSection('hydrogen')" class="stack-card p-8 bg-slate-900 border border-white/5 rounded-3xl shadow-xl hover:border-blue-500" data-t="stack_app1">수소 인프라</div>
+                        <div onclick="showSection('battery')" class="stack-card p-8 bg-slate-900 border border-white/5 rounded-3xl shadow-xl hover:border-emerald-500" data-t="stack_app2">전고체 배터리</div>
+                        <div onclick="showSection('v2x')" class="stack-card p-8 bg-slate-900 border border-white/5 rounded-3xl shadow-xl hover:border-orange-500" data-t="stack_app3">V2X 네트워크</div>
+                        <div onclick="showSection('quantum')" class="stack-card p-8 bg-slate-900 border border-white/5 rounded-3xl shadow-xl hover:border-purple-500" data-t="stack_app4">양자 컴퓨팅</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION -->
+        <section id="mission" class="content-section">
+            <div class="section-content-wrapper">
+                <div class="glass-panel reveal">
+                    <span class="text-blue-500 text-[0.7rem] font-black tracking-widest uppercase mb-8 block">01 / The Strategy</span>
+                    <h2 class="text-5xl md:text-6xl font-black mb-10 text-white leading-tight uppercase premium-title" data-t="mv_title">Breaking the<br>Threshold.</h2>
+                    <p class="text-slate-200 text-xl font-medium leading-relaxed mb-12" data-t="mv_desc">
+                        더다인은 단순한 효율 개선을 넘어, 에너지·모빌리티·컴퓨팅이 만나는 지점에서 발생하는 '파괴적 혁신'에 주목합니다. 문명의 레이어를 재구성하여 기술 주권을 선점합니다.
+                    </p>
+                    <div class="patent-badge mb-8 shadow-blue-900/50" onclick="event.stopPropagation(); window.open('https://patents.google.com/patent/KR102820330B1/ko', '_blank')">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span data-t="patent_status">그래핀 위상 전극 (KR102820330B1) 2025.06.13 등록 완료</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HYDROGEN -->
+        <section id="hydrogen" class="content-section">
+            <div class="section-content-wrapper">
+                <div class="flex flex-col lg:flex-row gap-24 items-center">
+                    <div class="flex-1 reveal">
+                        <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-[10px] font-black uppercase mb-10 inline-block shadow-lg">Energy Infrastructure</span>
+                        <h2 class="text-6xl md:text-7xl font-black text-white mb-12 uppercase leading-[0.9] premium-title" data-t="h2_title" data-html="true">Hydrogen<br><span class="text-blue-400 italic">Ecosystem.</span></h2>
+                        <div class="glass-panel">
+                            <div class="patent-badge mb-8 bg-blue-600/20 text-blue-400 border border-blue-500/30" onclick="event.stopPropagation(); window.open('https://patents.google.com/patent/KR1020250114830A/ko', '_blank')">
+                                <i class="fa-solid fa-atom"></i>
+                                <span data-t="h2_patent_name">AI 자율 최적화 수소연료전지 시스템 (10-2025-0114830)</span>
+                            </div>
+                            <p class="font-bold text-white text-2xl mb-8 border-b border-white/10 pb-4" data-t="h2_spec_title">차세대 소재 기술 사양</p>
+                            <ul class="space-y-6 text-lg text-slate-300 font-medium">
+                                <li class="flex gap-4 items-start"><i class="fa-solid fa-square-check text-blue-500 mt-1"></i> <span data-t="h2_spec1">ScHX: 저압 고밀도 저장, 1,000 사이클 후 용량 유지</span></li>
+                                <li class="flex gap-4 items-start"><i class="fa-solid fa-square-check text-blue-600 mt-1"></i> <span data-t="h2_spec2">BNHX: 고체 전해질 기반 중온 이온 전도도 획기적 개선</span></li>
+                            </ul>
+                            <div class="formula-box mt-12">
+                                <div id="eq-h2-reward" class="text-xl font-bold text-white"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BATTERY -->
+        <section id="battery" class="content-section">
+            <div class="section-content-wrapper w-full">
+                <div class="max-w-5xl ml-auto reveal">
+                    <span class="text-emerald-500 text-xs font-black tracking-widest uppercase mb-8 block">Solid-State SSB Mastery</span>
+                    <h2 class="text-7xl md:text-9xl font-black text-white mb-16 leading-[0.85] premium-title" data-t="ssb_title" data-html="true">Beyond<br><span class="text-slate-500">Lithium-Ion.</span></h2>
+                    <div class="glass-panel">
+                        <div class="patent-badge mb-8 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30" onclick="event.stopPropagation(); window.open('https://patents.google.com/patent/KR102820330B1/ko', '_blank')">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                            <span data-t="ssb_patent_name">하이브리드 고체 전해질 및 계면 제어 기술 (10-2820330)</span>
+                        </div>
+                        <p class="text-xl leading-relaxed text-slate-200 mb-10 font-bold" data-t="ssb_desc">
+                            황화물계($Li_3PS_4$) 및 산화물계($LLZO$) 혼합 전해질 및 LAGP 첨가로 계면 저항의 한계를 돌파했습니다. (등록특허 10-2820330)
+                        </p>
+                        <div id="eq-battery-mix" class="formula-box text-center font-black text-emerald-400 text-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- V2X -->
+        <section id="v2x" class="content-section">
+            <div class="section-content-wrapper text-white">
+                <div class="max-w-4xl reveal">
+                    <span class="text-orange-500 text-xs font-black tracking-widest uppercase mb-8 block">Cognitive Mobility Nexus</span>
+                    <h2 class="text-7xl md:text-[9rem] font-black mb-16 uppercase leading-[0.8] premium-title" data-t="v2x_title" data-html="true">Cognitive<br><span class="text-orange-500">Intelligence.</span></h2>
+                    <div class="glass-panel">
+                        <div class="patent-badge mb-8 bg-orange-600/20 text-orange-400 border border-orange-500/30" onclick="event.stopPropagation(); window.open('https://patents.google.com/patent/KR102888519B1/ko', '_blank')">
+                            <i class="fa-solid fa-tower-broadcast"></i>
+                            <span data-t="v2x_patent_name">V2X 기반 지능형 모빌리티 통합 기술 (10-2888519)</span>
+                        </div>
+                        <div id="eq-v2x-1" class="text-lg italic text-orange-400 font-black mb-6"></div>
+                        <div id="eq-v2x-3" class="text-lg italic text-orange-400 font-black"></div>
+                        <div class="mt-8 flex gap-3">
+                            <div class="px-4 py-2 rounded-xl bg-orange-600/20 border border-orange-500/30 text-[10px] font-black uppercase">C-V2X Support</div>
+                            <div class="px-4 py-2 rounded-xl bg-orange-600/20 border border-orange-500/30 text-[10px] font-black uppercase">10ms Latency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUANTUM -->
+        <section id="quantum" class="content-section">
+            <div class="section-content-wrapper text-center w-full text-white">
+                <div class="reveal">
+                    <span class="text-purple-600 text-xs font-black tracking-widest uppercase mb-10 block">Quantum Engineering Singularity</span>
+                    <h2 class="text-7xl md:text-[11rem] font-black uppercase mb-20 leading-none premium-title" data-t="q_title" data-html="true">Quantum<br><span class="highlight-text">Supremacy</span></h2>
+                    <div class="glass-panel mx-auto max-w-4xl text-left">
+                        <div class="patent-badge mb-8 bg-purple-600/20 text-purple-400 border border-purple-500/30" onclick="event.stopPropagation(); window.open('https://patents.google.com/patent/KR102927108B1/ko', '_blank')">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span data-t="q_patent_name">하이브리드 양자계산 및 실시간 오류 보정 기술 (10-2927108)</span>
+                        </div>
+                        <div id="eq-q-1" class="formula-box text-sm font-black text-purple-400 max-w-2xl mx-auto"></div>
+                        <p class="text-slate-400 text-center mt-6 text-sm" data-t="q_card1_desc">강화학습을 통해 양자 오류율을 80% 이상 단축한 실시간 보정 엔진입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVESTOR DATA ROOM -->
+        <section id="investor" class="content-section bg-slate-950">
+            <div class="section-content-wrapper w-full">
+                <div class="reveal text-center mb-24">
+                    <span class="text-blue-500 text-xs font-black tracking-widest uppercase mb-6 block">Investment Opportunity</span>
+                    <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase premium-title" data-t="investor_title">Deep Tech Investment</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-10 bg-slate-900 border border-white/5 rounded-[2.5rem] shadow-2xl reveal">
+                        <p class="text-4xl font-black text-blue-500 mb-4">$2.5T</p>
+                        <p class="text-xs font-black uppercase tracking-widest text-slate-500" data-t="market_cap">Energy Market</p>
+                    </div>
+                    <div class="p-10 bg-slate-900 border border-white/5 rounded-[2.5rem] shadow-2xl reveal" style="transition-delay: 0.1s;">
+                        <p class="text-4xl font-black text-emerald-500 mb-4">15+</p>
+                        <p class="text-xs font-black uppercase tracking-widest text-slate-500" data-t="patent_count">Core Patents</p>
+                    </div>
+                    <div class="p-10 bg-slate-900 border border-white/5 rounded-[2.5rem] shadow-2xl reveal" style="transition-delay: 0.2s;">
+                        <p class="text-4xl font-black text-orange-500 mb-4">Series A</p>
+                        <p class="text-xs font-black uppercase tracking-widest text-slate-500" data-t="funding_stage">Funding Stage</p>
+                    </div>
+                    <div class="p-10 bg-slate-900 border border-white/5 rounded-[2.5rem] shadow-2xl reveal" style="transition-delay: 0.3s;">
+                        <p class="text-4xl font-black text-purple-600 mb-4">Global</p>
+                        <p class="text-xs font-black uppercase tracking-widest text-slate-500" data-t="expansion">Market Expansion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HISTORY & HUB -->
+        <section id="history" class="content-section bg-slate-900 text-white">
+            <div class="section-overlay" style="background: linear-gradient(to bottom, rgba(10,15,30,0.9), rgba(11,15,25,1))"></div>
+            <div class="section-content-wrapper w-full">
+                <div class="grid lg:grid-cols-2 gap-24 items-center">
+                    <div class="reveal">
+                        <h2 class="text-6xl md:text-8xl font-black mb-16 uppercase tracking-tighter leading-none text-white premium-title" data-t="hub_title">Technical<br>Heritage.</h2>
+                        <div class="space-y-10 border-t border-white/10 pt-16 text-sm">
+                            <div class="flex justify-between border-b border-white/5 pb-4">
+                                <span class="text-slate-500 uppercase font-black tracking-widest">Chief Executives</span>
+                                <span class="font-bold text-lg md:text-xl text-right text-white">노문희 (Mun-hee Noh) / 김근청 (Kim Keun-Cheong)</span>
+                            </div>
+                            <div class="flex justify-between border-b border-white/5 pb-4">
+                                <span class="text-slate-500 uppercase font-black tracking-widest">HQ / Hub</span>
+                                <span class="font-bold text-lg md:text-xl text-slate-300" data-t="hub_loc">충남 청양 통합 연구 센터</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal text-center md:text-left">
+                        <div class="p-16 bg-white/5 rounded-[4rem] border border-white/10 relative overflow-hidden backdrop-blur-xl shadow-2xl">
+                            <p class="text-3xl font-light italic leading-relaxed text-slate-200 mb-12" data-t="hub_quote">"우리는 기술의 임계점이라는 것이 존재하지 않는다는 믿음으로 문명의 새로운 레이어를 매일 다시 그립니다."</p>
+                            <p class="text-[10px] text-slate-500 uppercase font-black tracking-[0.5em]">© 2026 THE DAIN CO., LTD. ALL RIGHTS RESERVED.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-white py-32 px-10 border-t border-white/5 relative z-[1000]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-24 text-center md:text-left">
+            <div>
+                <h3 class="font-black text-4xl tracking-tighter mb-8">THEDAIN</h3>
+                <p class="text-base text-slate-500 leading-relaxed font-light" data-t="footer_desc">Engineering the Infrastructure of the Next Civilization</p>
+                <div class="flex gap-4 mt-12 opacity-30">
+                    <a href="https://linkedin.com/company/thedain" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-3xl hover:text-white transition-colors"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-[11px] uppercase tracking-[0.4em] text-blue-500 mb-12">Technology</h4>
+                <ul class="text-lg text-slate-400 space-y-6 font-light">
+                    <li onclick="showSection('hydrogen')" class="hover:text-white transition-colors cursor-pointer">Hydrogen Infrastructure</li>
+                    <li onclick="showSection('battery')" class="hover:text-white transition-colors cursor-pointer">Solid State Battery</li>
+                    <li onclick="showSection('v2x')" class="hover:text-white transition-colors cursor-pointer">Cognitive V2X</li>
+                    <li onclick="showSection('quantum')" class="hover:text-white transition-colors cursor-pointer">Quantum AI</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-[11px] uppercase tracking-[0.4em] text-blue-500 mb-12">Global Headquarters</h4>
+                <p class="text-lg text-slate-400 leading-loose font-light">
+                    Global R&D Center, Chungnam Korea<br>
+                    Headquarters: 1212-7 Chungui-ro, Cheongyang<br>
+                    Email: info@thedain.co.kr
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-32 pt-12 border-t border-white/5 text-[9px] text-slate-700 uppercase font-black tracking-[1em] text-center">
+            © 2026 THE DAIN CO., LTD. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        const i18n = {
+            ko: {
+                nav_heritage: "Heritage", nav_mission: "미션", nav_stack: "핵심 아키텍처", nav_history: "기술 허브", nav_certs: "인증",
+                nav_hydrogen: "Hydrogen", nav_battery: "Solid-State", nav_v2x: "Cognitive V2X", nav_quantum: "Quantum", nav_news: "Intelligence",
+                hero_label: "글로벌 인프라 표준의 재정의", hero_title: "Sculpting<br>The Hyper-<br><span class='highlight-text'>Civilization</span>",
+                hero_desc: "에너지, 모빌리티, 인프라의 모든 지능형 신경망을 연결하는 AI 기반 초격차 하이브리드 기술의 정점.",
+                hero_btn: "탐험 시작", stack_label: "Core Nexus", stack_title: "Technical Architecture",
+                stack_patent_id: "Patent: KR102820330B1 (2025)", stack_app1: "수소 인프라", stack_app2: "전고체 배터리", stack_app3: "V2X 네트워크", stack_app4: "양자 컴퓨팅",
+                mv_title: "Breaking the Threshold.", mv_desc: "더다인은 단순한 효율 개선을 넘어, 에너지·모빌리티·컴퓨팅이 만나는 지점에서 발생하는 '파괴적 혁신'에 주목합니다. 문명의 레이어를 재구성합니다.",
+                patent_status: "그래핀 위상 전극 (KR102820330B1) 2025.06.13 등록 완료",
+                h2_title: "Hydrogen<br><span class='text-blue-500 italic'>Ecosystem.</span>", h2_spec_title: "차세대 소재 기술 사양", 
+                h2_patent_name: "AI 자율 최적화 수소연료전지 시스템 (10-2025-0114830)",
+                h2_spec1: "ScHX: 저압 고밀도 저장, 1,000 사이클 후 용량 유지",
+                h2_spec2: "BNHX: 고체 전해질 기반 중온 이온 전도도 획기적 개선",
+                ssb_title: "Beyond<br><span class='text-slate-300'>Lithium-Ion.</span>", ssb_desc: "황화물계($Li_3PS_4$) 및 산화물계($LLZO$) 혼합 전해질 및 LAGP 첨가로 계면 저항의 한계를 돌파했습니다.",
+                ssb_patent_name: "하이브리드 고체 전해질 및 계면 제어 기술 (10-2820330)",
+                v2x_title: "Cognitive<br><span class='text-orange-500'>Intelligence.</span>", v2x_patent_tag: "C-V2X + DSRC 듀얼 모드 (10ms 초저지연)",
+                v2x_patent_name: "V2X 기반 지능형 모빌리티 통합 기술 (10-2888519)",
+                q_title: "Quantum<br><span class='highlight-text'>Supremacy</span>",
+                q_patent_name: "하이브리드 양자계산 및 실시간 오류 보정 기술 (10-2927108)",
+                q_card1_desc: "강화학습을 통해 양자 오류율을 80% 이상 단축한 실시간 보정 엔진입니다.",
+                investor_title: "Deep Tech Investment", market_cap: "에너지 시장 가치", patent_count: "핵심 특허 수", funding_stage: "투자 단계", expansion: "글로벌 확장성",
+                hub_title: "Technical<br>Heritage.", hub_loc: "충남 청양 통합 연구 센터", hub_quote: "기술의 임계점이 존재하지 않는다는 믿음으로 문명을 매일 다시 그립니다.",
+                footer_desc: "차세대 문명 인프라를 위한 글로벌 엔지니어링", footer_contact: "글로벌 R&D 센터, 대한민국 충남",
+                contact_title: "Contact Nexus", contact_name: "성함", contact_email: "이메일", contact_msg: "문의 내용", contact_btn: "연결 초기화"
+            },
+            en: {
+                nav_heritage: "Heritage", nav_mission: "Mission", nav_stack: "Architecture", nav_history: "Hub", nav_certs: "Certs & Patents",
+                hero_label: "Redefining Global Infrastructure", hero_title: "Sculpting<br>The Hyper-<br><span class='highlight-text'>Civilization</span>",
+                hero_desc: "The pinnacle of hyper-hybrid technology connecting all intelligent neural networks.",
+                hero_btn: "Start Exploration", stack_label: "Core Nexus", stack_title: "Technical Architecture",
+                stack_patent_id: "Patent: KR102820330B1 (2025)", stack_app1: "H2 Infra", stack_app2: "SSB Battery", stack_app3: "V2X Network", stack_app4: "Quantum Compute",
+                mv_title: "Breaking the Threshold.", mv_desc: "THEDAIN focuses on disruptive innovation beyond simple improvements.",
+                patent_status: "Graphene Topological Electrode (KR102820330B1) Registered on 2025.06.13",
+                h2_title: "Hydrogen<br><span class='text-blue-500 italic'>Ecosystem.</span>", h2_spec_title: "Next-Gen Materials", 
+                h2_patent_name: "AI Optimized Hydrogen Fuel Cell System (10-2025-0114830)",
+                h2_spec1: "ScHX: High density storage, cycle durability.",
+                h2_spec2: "BNHX: Breakthrough in mid-temp conductivity.",
+                ssb_title: "Beyond<br><span class='text-slate-300'>Lithium-Ion.</span>", ssb_desc: "Breakthrough in interfacial resistance via Hybrid electrolyte.",
+                ssb_patent_name: "Hybrid Solid Electrolyte & Interfacial Control (10-2820330)",
+                v2x_title: "Cognitive<br><span class='text-orange-500'>Intelligence.</span>", v2x_patent_tag: "C-V2X + DSRC Dual Mode (10ms Latency)",
+                v2x_patent_name: "V2X-based Intelligent Mobility Integration (10-2888519)",
+                q_title: "Quantum<br><span class='highlight-text'>Supremacy</span>",
+                q_patent_name: "Hybrid Quantum Compute & Real-time Error Correction (10-2927108)",
+                q_card1_desc: "Real-time correction engine reducing quantum error rates by over 80%.",
+                investor_title: "Deep Tech Investment", market_cap: "Market Opportunity", patent_count: "Core Patents", funding_stage: "Funding Stage", expansion: "Global Scalability",
+                hub_title: "Technical<br>Heritage.", hub_loc: "THEDAIN R&D Center", hub_quote: "We redraw civilization every day with the belief that technical thresholds do not exist.",
+                footer_desc: "Engineering for Next Civilization Infrastructure", footer_contact: "Global R&D Center, Chungnam Korea",
+                contact_title: "Contact Nexus", contact_name: "Name", contact_email: "Email", contact_msg: "Details", contact_btn: "Initialize"
+            },
+            zh: {
+                nav_heritage: "技术遗产", nav_mission: "使命", nav_stack: "架构", nav_history: "中心", nav_certs: "专利认证",
+                hero_label: "重塑全球基礎設施標準", hero_title: "Sculpting<br>The Hyper-<br><span class='highlight-text'>Civilization</span>",
+                hero_desc: "重新定义能源并连接智能网络的 AI 混合技术巅峰。",
+                hero_btn: "开始探索", stack_label: "核心枢纽", stack_title: "技术架构",
+                stack_patent_id: "专利: KR102820330B1 (2025)", stack_app1: "氢能基础设施", stack_app2: "固态电池", stack_app3: "V2X 网络", stack_app4: "量子计算",
+                mv_title: "突破极限.", mv_desc: "专注于能源和计算交叉点的颠기성创新。",
+                patent_status: "石墨烯拓扑电极 (KR102820330B1) 2025.06.13 注册完成",
+                h2_title: "氢能<br><span class='text-blue-500 italic'>生态系统.</span>", h2_spec_title: "下一代材料", 
+                h2_patent_name: "AI自主优化氢燃料电池系统 (10-2025-0114830)",
+                h2_spec1: "ScHX: 低压高密度储氢，1000次循环容量稳定",
+                h2_spec2: "BNHX: 中温离子导电性的突破性改进",
+                ssb_title: "超越<br><span class='text-slate-300'>锂离子.</span>", ssb_desc: "通过混合电解质突破界面电阻限制。",
+                ssb_patent_name: "混合固体电解质及界面控制技术 (10-2820330)",
+                v2x_title: "认知<br><span class='text-orange-500'>智能.</span>", v2x_patent_tag: "C-V2X + DSRC 双模式 (10ms 超低延迟)",
+                v2x_patent_name: "基于 V2X 的智能出行集成技术 (10-2888519)",
+                q_title: "量子<br><span class='highlight-text'>霸权</span>",
+                q_patent_name: "混合量子计算与实时误差校正技术 (10-2927108)",
+                q_card1_desc: "利用强化学习减少 80% 量的实时校正引擎。",
+                investor_title: "深科技投资", market_cap: "能源市场机会", patent_count: "核心专利", funding_stage: "融资阶段", expansion: "全球扩展",
+                hub_title: "技术<br>遗产.", hub_loc: "研发中心", hub_quote: "坚信技术无极限，每天都在重画文明。",
+                footer_desc: "工程化下一代文明基础设施", footer_contact: "全球R&D中心，韓國忠南",
+                contact_title: "联系中心", contact_name: "名称", contact_email: "电邮", contact_msg: "留言", contact_btn: "初始化"
+            },
+            ja: {
+                nav_heritage: "ヘ리테이지", nav_mission: "ビジョン", nav_stack: "アーキテクチャ", nav_history: "ハブ", nav_certs: "認証",
+                hero_label: "グローバル인프라基準의再定義", hero_title: "Sculpting<br>The Hyper-<br><span class='highlight-text'>Civilization</span>",
+                hero_desc: "エネルギー源을再定義し、ネットワーク를繋ぐAI技術의頂점。",
+                hero_btn: "探索開始", stack_label: "コア네クサ스", stack_title: "技術アーキ텍처",
+                stack_patent_id: "特許: KR102820330B1 (2025)", stack_app1: "水素インフラ", stack_app2: "全固体電池", stack_app3: "V2X ネットワーク", stack_app4: "量子コンピューティング",
+                mv_title: "限界を超える.", mv_desc: "エネルギー와 コンピューティング의 교차점에서 일어나는 파괴적 혁신。",
+                patent_status: "グラフェン拓扑電極 (KR102820330B1) 2025.06.13 登録完了",
+                h2_title: "水素<br><span class='text-blue-600 italic'>エコシステム.</span>", h2_spec_title: "次世代素材仕様", 
+                h2_patent_name: "AI自律最適化水素燃料電池システム (10-2025-0114830)",
+                h2_spec1: "ScHX: 低압高密度貯蔵、1000サイクル後の容量維持",
+                h2_spec2: "BNHX: 中温イオン伝導度の飛躍적向上",
+                ssb_title: "리치움이온을<br><span class='text-slate-300'>超えて.</span>", ssb_desc: "ハイブリッド電해질 및 LAGP로 界面抵抗의 限界를 突破.",
+                ssb_patent_name: "ハイブリッド固体電解質および界面制御技術 (10-2820330)",
+                v2x_title: "認知형<br><span class='text-orange-500'>인텔리전스.</span>", v2x_patent_tag: "C-V2X + DSRC デュアルモード (10ms 超低遅延)",
+                v2x_patent_name: "V2Xベースのインテリジェントモビリティ統合技術 (10-2888519)",
+                q_title: "量子<br><span class='highlight-text'>覇権</span>",
+                q_patent_name: "ハイブリッド量子計算およびリアルタイム誤り訂正技術 (10-2927108)",
+                q_card1_desc: "量子エラー率を 80% 削減する補正エンジン。",
+                investor_title: "ディープテック投資", market_cap: "市場機会", patent_count: "コア特許", funding_stage: "投資段階", expansion: "グローバル拡張",
+                hub_title: "テクニ컬<br>ヘ리테이지.", hub_loc: "テクニカルハブ", hub_quote: "技術に限界はないという信念で、文明を毎日描き直します。"
+            }
+        };
+
+        // --- Three.js Engine Core ---
+        let scene, camera, renderer, masterGroup;
+        let objects = { torus: null, cube: null, lattice: null };
+        const groups = { hydrogen: new THREE.Group(), battery: new THREE.Group(), quantum: new THREE.Group() };
+
+        function initThree() {
+            try {
+                if (!window.WebGLRenderingContext) throw new Error("WebGL Not Supported");
+                scene = new THREE.Scene();
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.outputColorSpace = THREE.SRGBColorSpace;
+                renderer.toneMapping = THREE.ACESFilmicToneMapping;
+                renderer.toneMappingExposure = 1.2;
+                document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+                scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+                const sun = new THREE.DirectionalLight(0xffffff, 1.2);
+                sun.position.set(5, 5, 5);
+                scene.add(sun);
+                
+                masterGroup = new THREE.Group();
+                masterGroup.add(groups.hydrogen, groups.battery, groups.quantum);
+                scene.add(masterGroup);
+
+                const techMat = (color) => new THREE.MeshPhysicalMaterial({ color, metalness: 0.9, roughness: 0.1, clearcoat: 1, transmission: 0.1 });
+
+                objects.torus = new THREE.Mesh(new THREE.TorusKnotGeometry(2, 0.4, 150, 20), techMat(0x0066FF));
+                groups.hydrogen.add(objects.torus);
+                objects.torus.position.set(8, 0, 0);
+
+                objects.cube = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5, 5, 32), techMat(0x00FF88));
+                groups.battery.add(objects.cube);
+                objects.cube.position.set(-10, -15, -5);
+
+                const pCount = window.innerWidth < 768 ? 250 : 600;
+                const pGeo = new THREE.BufferGeometry();
+                const pPos = new Float32Array(pCount * 3);
+                for(let i=0; i<pCount*3; i++) pPos[i] = (Math.random()-0.5)*50;
+                pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+                objects.lattice = new THREE.Points(pGeo, new THREE.PointsMaterial({ size: 0.05, color: 0x0066FF, transparent: true, opacity: 0.4 }));
+                groups.quantum.add(objects.lattice);
+
+                camera.position.set(0, 0, 12);
+                renderer.setAnimationLoop(animate);
+            } catch (e) {
+                console.warn("3D Engine Init Error:", e);
+                const cc = document.getElementById("canvas-container");
+                if (cc) cc.remove();
+            }
+        }
+
+        function animate() {
+            if(objects.torus) objects.torus.rotation.y += 0.005;
+            if(objects.cube) objects.cube.rotation.x += 0.01;
+            if(objects.lattice) objects.lattice.rotation.y += 0.0003;
+            masterGroup.rotation.y += 0.0005;
+
+            const scrollY = window.scrollY;
+            const progress = scrollY / (document.body.scrollHeight - window.innerHeight);
+            const targetPos = new THREE.Vector3(Math.sin(progress * 4) * 4, -progress * 45, 10 + Math.cos(progress * 3) * 3);
+            camera.position.lerp(targetPos, 0.04);
+            camera.lookAt(0, -progress * 25, 0);
+
+            const vH = window.innerHeight;
+            groups.hydrogen.visible = (scrollY < vH * 5);
+            groups.battery.visible = (scrollY > vH * 2 && scrollY < vH * 8);
+            groups.quantum.visible = (scrollY > vH * 5);
+
+            renderer.render(scene, camera);
+        }
+
+        const lenis = new Lenis({ lerp: 0.065, wheelMultiplier: 1.2, smoothWheel: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        function showSection(id) {
+            toggleMobileMenu(true);
+            const target = document.getElementById(id);
+            if(target) {
+                lenis.scrollTo(target, { duration: 1.5 });
+                document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+                target.classList.add('active');
+            }
+        }
+
+        function changeLang(lang) {
+            if (!i18n[lang]) return;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.innerText.toLowerCase() === (lang === 'ko' ? 'kr' : lang)));
+            document.querySelectorAll('[data-t]').forEach(el => {
+                const key = el.getAttribute('data-t');
+                if (i18n[lang][key]) {
+                    if(el.dataset.html === "true") el.innerHTML = i18n[lang][key];
+                    else el.textContent = i18n[lang][key];
+                }
+            });
+            renderFormulas();
+        }
+
+        function renderFormulas() {
+            const safeRender = (id, latex) => {
+                const el = document.getElementById(id);
+                if (el) { try { katex.render(latex, el); } catch(e) {} }
+            };
+            safeRender("eq-h2-reward", "R = \\alpha(P + \\eta) - \\beta |T_{target} - T_{curr}| - \\gamma \\Delta Pr");
+            safeRender("eq-battery-mix", "W_{mix} = 6(\\text{Sulfide}) : 3(\\text{Oxide}) : 1(\\text{Liquid})");
+            safeRender("eq-v2x-1", "S = w_1(1-L) + w_2\\text{SNR} - w_3\\text{IF} - w_4\\text{PL} - w_5 f(v)");
+            safeRender("eq-v2x-3", "G_A = C \\frac{W_A}{W_A + W_B}, \\, W_A = \\alpha \\frac{Q_A}{L_A}");
+            safeRender("eq-q-1", "R = \\alpha \\sum (q_{obs} \\cdot q_{pred}) - \\beta \\Delta T - \\gamma \\nabla B");
+        }
+
+        function toggleMobileMenu(forceClose = false) {
+            const menu = document.getElementById('mobile-menu');
+            if (!menu) return;
+            if(forceClose) { menu.classList.add('hidden'); menu.classList.remove('flex', 'open'); return; }
+            menu.classList.toggle('hidden'); menu.classList.toggle('flex');
+            setTimeout(() => menu.classList.toggle('open'), 10);
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+
+        window.addEventListener("scroll", () => {
+            const nav = document.querySelector("nav");
+            if(window.scrollY > 60) nav.classList.add("scrolled");
+            else nav.classList.remove("scrolled");
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
+            const sp = document.getElementById("scroll-progress");
+            if (sp) sp.style.width = scrolled + "%";
+            const sections = document.querySelectorAll(".content-section");
+            sections.forEach(sec => {
+                const rect = sec.getBoundingClientRect();
+                if(rect.top < 300 && rect.bottom > 300){
+                    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+                    const navLink = document.querySelector(`[onclick="showSection('${sec.id}')"]`);
+                    if(navLink) navLink.classList.add("active");
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (camera && renderer) {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+        });
+
+        window.onload = () => {
+            const loader = document.getElementById("loader");
+            if (loader) { loader.style.opacity = 0; setTimeout(() => loader.remove(), 800); }
+            if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+            initThree();
+            const detectLang = () => {
+                const l = navigator.language || navigator.userLanguage;
+                if(l.startsWith('ko')) return 'ko';
+                if(l.startsWith('zh')) return 'zh';
+                if(l.startsWith('ja')) return 'ja';
+                return 'en';
+            };
+            changeLang(detectLang());
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+            }, { threshold: 0.15, rootMargin: "0px 0px -80px 0px" });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            document.querySelectorAll('.content-section').forEach(el => observer.observe(el));
+            new Swiper('.mySwiper', { loop: true, centeredSlides: true, slidesPerView: 'auto', spaceBetween: 40, autoplay: { delay: 4000 }, pagination: { el: '.swiper-pagination', clickable: true }, speed: 1200 });
+        };
+    </script>
+</body>
+</html>
